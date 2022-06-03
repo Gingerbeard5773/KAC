@@ -64,3 +64,86 @@ print(hpOnStart+''); // this would print '1.5'
 </details>
 <br>
 <br>
+
+## Vec2f getPosition()
+This returns the most recent location of the blob in the world.
+<br>
+<br>
+<small>Returns: Vec2f
+
+<br>
+<br>
+
+## Vec2f getOldPosition()
+This returns the position that was set previously before the blob's current position.
+<br>
+<br>
+<small>Returns: Vec2f
+
+<br>
+<br>
+
+## Vec2f getInterpolatedPosition()
+This returns a 'smoothened' position that compensates for the difference between the blob's old and new position.
+<br>
+This is mainly used for GUI and other rendering since it is smoother.
+<br>
+<br>
+<small>Returns: Vec2f
+
+<br>
+<br>
+
+## void setPosition(Vec2f pos)
+Set the blob's world position.
+<br>
+<br>
+<small>Returns: void
+
+<details>
+<summary>Example</summary>
+
+```as
+Vec2f mapCenter = getMap().getMapDimensions() / 2; // grab the dimensions of the map and then divide by 2 to find the map's center
+this.setPosition(mapCenter); // this would teleport the blob from anywhere to the center of map
+```
+
+</details>
+<br>
+<br>
+
+## Vec2f getVelocity()
+This returns the velocity of the blob.
+<br>
+<br>
+<small>Returns: Vec2f
+
+<br>
+<br>
+
+## Vec2f getOldVelocity()
+This returns the previous velocity that was set before the blob's current velocity.
+<br>
+<br>
+<small>Returns: Vec2f
+
+<br>
+<br>
+
+## void setVelocity(Vec2f vel)
+Set the velocity of the blob.
+<br>
+<br>
+<small>Returns: void
+
+<details>
+<summary>Example</summary>
+
+```as
+Vec2f velocity = this.getVelocity(); //our current velocity
+this.setVelocity(velocity * 2); // double the blob's velocity (the blob would speed up 2x)
+```
+
+</details>
+
+<br>
