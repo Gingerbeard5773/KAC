@@ -97,6 +97,8 @@ This is mainly used for GUI and other rendering since it is smoother.
 ## void setPosition(Vec2f pos)
 Set the blob's world position.
 <br>
+If this is done clientside for a player's blob it will be synced.  If this is done serverside for any other blob it will be synced.
+<br>
 <br>
 <small>Returns: void
 
